@@ -3,11 +3,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Calendar } from '@/components/ui/calendar';
+// import { Calendar } from '@/components/ui/calendar';
 import { format } from 'date-fns';
-import { CalendarIcon, Users, ShoppingCart, ArrowRightLeft, ListChecks } from 'lucide-react';
-import { cn } from "@/lib/utils";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import {Users, ShoppingCart, ArrowRightLeft} from 'lucide-react';
+// import { cn } from "@/lib/utils";
+// import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 
 // Mock Data (Replace with your actual data fetching)
 interface InOutData {
@@ -62,8 +62,8 @@ const generateMockCustomerData = (): CustomerData[] => {
 
 const generateMockSalesData = (): SalesData => {
     const today = new Date();
-    const startOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay());
-    const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+    // const startOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay());
+    // const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
 
     const dailySales = Math.floor(Math.random() * 2000) + 1000;  // Random sales between 50 and 150
     const weeklySales = Math.floor(Math.random() * 10000) + 7000; // Random sales between 300 and 800
@@ -86,8 +86,8 @@ const GoldenValleyApp = () => {
     const [inOutData, setInOutData] = useState<InOutData[]>([]);
     const [customerData, setCustomerData] = useState<CustomerData[]>([]);
     const [salesData, setSalesData] = useState<SalesData>({ day: 0, week: 0, month: 0 });
-    const [isMobile, setIsMobile] = useState(false);
-    const [date, setDate] = useState<Date | undefined>(new Date())
+    const [setIsMobile] = useState(false);
+    // const [date, setDate] = useState<Date | undefined>(new Date())
 
     // Mock data loading (replace with actual API calls)
     useEffect(() => {
