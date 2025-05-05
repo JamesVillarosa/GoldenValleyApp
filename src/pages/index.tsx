@@ -61,7 +61,7 @@ const generateMockCustomerData = (): CustomerData[] => {
 };
 
 const generateMockSalesData = (): SalesData => {
-    const today = new Date();
+    // const today = new Date();
     // const startOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay());
     // const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
 
